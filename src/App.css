@@ -2,7 +2,24 @@ html,
 body {
   height: 100%;
   width: 100%;
+  color: hsl(0, 0%, 95%);
   /* scrollbar-width: none; */
+}
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: hsl(0, 0%, 5%);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @font-face {

@@ -1,8 +1,9 @@
 .main-window {
-  background: linear-gradient(rgb(118, 182, 255), rgb(255, 121, 121));
+  background: hsl(0, 0%, 40%);
   border: 2px solid hsl(0, 0%, 95%);
-  margin-top: 1em;
-  height: 70%;
+  margin: auto;
+  /* height: 100%;
+  width: 50em; */
 }
 
 .top-bar {
@@ -14,12 +15,17 @@
   padding: 5px;
 }
 
-.main-content {
+.window-title {
+  margin: auto;
+}
+
+.window-content {
   /* background-color: ; */
+  padding: 0 2em;
 }
 
 .text {
-  color: hsl(0, 0%, 95%);
+  /* color: hsl(0, 0%, 95%); */
 }
 
 .red-circle,
@@ -28,7 +34,7 @@
   border-radius: 50%;
   height: 20px;
   width: 20px;
-  transition: 200ms;
+  transition: 150ms;
 }
 
 .red-circle:hover,
@@ -44,13 +50,19 @@
 }
 
 .red-circle {
-  background-color: red;
+  background-color: rgb(255, 121, 121);
 }
 
 .green-circle {
-  background-color: green;
+  background-color: rgb(117, 212, 117);
 }
 
 .yellow-circle {
-  background-color: yellow;
+  background-color: rgb(255, 255, 123);
+}
+
+.invisible-circle {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
 }
