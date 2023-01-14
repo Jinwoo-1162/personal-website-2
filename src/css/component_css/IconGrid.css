@@ -1,0 +1,26 @@
+#icon-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  height: 100%;
+  width: 100%;
+  z-index: 8;
+  padding: 5px;
+  gap: 2px;
+}
+
+/* detects mobile screens */
+@media (pointer: none), (pointer: coarse) {
+  #icon-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    z-index: 8;
+    padding: 5px;
+    gap: 2px;
+  }
+}

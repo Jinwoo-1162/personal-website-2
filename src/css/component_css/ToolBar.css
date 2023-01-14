@@ -1,0 +1,18 @@
+.tool-bar {
+  background-color: hsl(0, 0%, 18%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* gap: 20px; */
+  padding: 1px 5px;
+}
+
+.tool-bar-option {
+  padding: 4px 10px;
+  transition: 150ms;
+}
+
+.tool-bar-option:hover {
+  transform: scale(1.05);
+  background-color: hsl(0, 0%, 0%);
+}

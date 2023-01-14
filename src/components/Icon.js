@@ -1,4 +1,3 @@
-import { ReactSVG } from "react-svg";
 import "../css/component_css/Icon.css";
 
 function Icon(props) {
