@@ -10,13 +10,11 @@
   height: 10%;
   margin-bottom: 5px;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  user-select: none;
 }
 
-#app-divider {
-  background-color: hsl(0, 0, 95%);
+.app-divider {
+  background-color: hsla(0, 0%, 95%, 0.61);
+  height: 70%;
   width: 2px;
-  height: 90%;
 }

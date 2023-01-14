@@ -5,6 +5,7 @@
   justify-content: flex-start;
   /* gap: 20px; */
   padding: 1px 5px;
+  user-select: none;
 }
 
 .tool-bar-option {
