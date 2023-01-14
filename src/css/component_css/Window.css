@@ -1,0 +1,56 @@
+.main-window {
+  background: linear-gradient(rgb(118, 182, 255), rgb(255, 121, 121));
+  border: 2px solid hsl(0, 0%, 95%);
+  margin-top: 1em;
+  height: 70%;
+}
+
+.top-bar {
+  background-color: hsl(0, 0%, 18%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 5px;
+}
+
+.main-content {
+  /* background-color: ; */
+}
+
+.text {
+  color: hsl(0, 0%, 95%);
+}
+
+.red-circle,
+.green-circle,
+.yellow-circle {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  transition: 200ms;
+}
+
+.red-circle:hover,
+.green-circle:hover,
+.yellow-circle:hover {
+  transform: scale(1.1);
+}
+
+.red-circle:active,
+.green-circle:active,
+.yellow-circle:active {
+  transform: scale(0.9);
+}
+
+.red-circle {
+  background-color: red;
+}
+
+.green-circle {
+  background-color: green;
+}
+
+.yellow-circle {
+  background-color: yellow;
+}

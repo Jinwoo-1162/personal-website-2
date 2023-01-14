@@ -1,0 +1,11 @@
+#home-background {
+  background-color: hsl(0, 0%, 5%);
+  height: calc(100vh - 4em);
+  width: calc(100vw - 4em);
+  padding: 2em;
+}
+
+.my-name {
+  font-size: 3em;
+  color: hsl(0, 0%, 95%);
+}
