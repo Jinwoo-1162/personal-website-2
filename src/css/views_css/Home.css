@@ -31,6 +31,7 @@
   border: 2px solid hsl(0, 0%, 95%);
   margin: 1em 0 0 0;
   height: 85%;
+  cursor: url("../../images/cursor32.png"), auto;
 }
 
 #main-content {

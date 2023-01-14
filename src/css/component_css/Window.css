@@ -1,6 +1,7 @@
 .main-window {
   background: hsl(0, 0%, 40%);
   border: 2px solid hsl(0, 0%, 95%);
+  cursor: url("../../images/cursor32.png"), auto;
   /* height: 100%;
   width: 50em; */
 }
@@ -30,6 +31,10 @@
 .red-circle,
 .green-circle,
 .yellow-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   border-radius: 50%;
   height: 20px;
   width: 20px;
@@ -41,6 +46,16 @@
 .yellow-circle:hover {
   transform: scale(1.1);
 }
+
+/* .red-circle:hover:before {
+  content: "X";
+  color: rgb(173, 43, 43);
+}
+
+.yellow-circle:hover:before {
+  content: "_";
+  color: rgb(165, 165, 50);
+} */
 
 .red-circle:active,
 .green-circle:active,
