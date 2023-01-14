@@ -1,6 +1,6 @@
 import "../css/views_css/Home.css";
 import Footer from "../components/Footer";
-import AppBar from "../components/AppBar";
+// import AppBar from "../components/AppBar";
 import IconGrid from "../components/IconGrid";
 import ToolBar from "../components/ToolBar";
 import iconlist from "../resources/iconlist";
@@ -9,8 +9,24 @@ import Window from "../components/Window";
 import Typewriter from "typewriter-effect";
 
 function Home() {
+  const [windowManager, setWindowManager] = useState();
   const [numActiveApps, setNumActiveApps] = useState(0);
   const [appList, setAppList] = useState(iconlist);
+
+  useEffect(() => {
+    let startingList = appList.map((ele) => (
+      <Window
+        activeCount={numActiveApps}
+        setActiveCount={setNumActiveApps}
+        appList={appList}
+        setAppList={setAppList}
+        content={ele}
+      />
+    ));
+
+    setWindowManager(startingList);
+    console.log(appList);
+  }, [appList, numActiveApps]);
 
   return (
     <div id="home-background">
@@ -41,16 +57,7 @@ function Home() {
             appList={appList}
             setAppList={setAppList}
           />
-          {appList.map((ele) => (
-            <Window
-              activeCount={numActiveApps}
-              setActiveCount={setNumActiveApps}
-              appList={appList}
-              setAppList={setAppList}
-              content={ele}
-              style={ele.active ? { display: "initial" } : { display: "none" }}
-            />
-          ))}
+          {windowManager}
         </div>
         {/* <AppBar showBar={numActiveApps !== 0} /> */}
       </div>

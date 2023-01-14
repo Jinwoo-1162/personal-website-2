@@ -5,33 +5,31 @@ function Icon(props) {
   const [active, setActive] = useState(false);
 
   const clickIcon = () => {
-    if (active) {
-      // toggle minimizing the window
-      let newAppList = props.appList.map((ele) =>
-        ele.title === props.icon_content.title
-          ? {
-              ...ele,
-              minimized: !ele.minimized,
-            }
-          : ele
-      );
-      props.setAppList(newAppList);
-      console.log(props.appList);
-    } else {
-      // open a new window
-      let newAppList = props.appList.map((ele) =>
-        ele.title === props.icon_content.title
-          ? {
-              ...ele,
-              active: true,
-            }
-          : ele
-      );
-      props.setAppList(newAppList);
-      props.setActiveCount((activeCount) => activeCount + 1);
-      console.log(props.appList);
-    }
-    setActive((active) => !active);
+    // if (active) {
+    // toggle minimizing the window
+    //   let newAppList = props.appList.map((ele) =>
+    //     ele.title === props.icon_content.title
+    //       ? {
+    //           ...ele,
+    //           minimized: !ele.minimized,
+    //         }
+    //       : ele
+    //   );
+    //   props.setAppList(newAppList);
+    // } else {
+    // open a new window
+    let newAppList = props.appList.map((ele) =>
+      ele.title === props.icon_content.title
+        ? {
+            ...ele,
+            active: true,
+          }
+        : ele
+    );
+    props.setAppList(newAppList);
+    props.setActiveCount((activeCount) => activeCount + 1);
+    // }
+    // setActive((active) => !active);
   };
 
   return (

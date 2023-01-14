@@ -16,7 +16,7 @@ function Window(props) {
     );
     props.setAppList(newAppList);
     props.setActiveCount((activeCount) => activeCount - 1);
-    console.log(props.appList);
+    // console.log(props.appList);
   };
 
   return (
@@ -26,6 +26,9 @@ function Window(props) {
       bounds="parent"
       dragHandleClassName="top-bar"
       cancel=".circle"
+      style={
+        props.content.active ? { display: "initial" } : { display: "none" }
+      }
     >
       <div className="main-window">
         <div className="top-bar">

@@ -1,4 +1,4 @@
-export default [
+const iconlist = [
   {
     img: "/recycle_icon.png",
     alt: "trash",
@@ -55,20 +55,6 @@ export default [
     minimized: false,
     content: "This is the window for Test",
   },
-  {
-    img: "/document_icon.png",
-    alt: "Test",
-    title: "Test",
-    active: false,
-    minimized: false,
-    content: "This is the window for Test",
-  },
-  {
-    img: "/document_icon.png",
-    alt: "Test",
-    title: "Test",
-    active: false,
-    minimized: false,
-    content: "This is the window for Test",
-  },
 ];
+
+export default iconlist;
