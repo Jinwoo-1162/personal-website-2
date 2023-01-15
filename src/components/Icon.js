@@ -18,6 +18,20 @@ function Icon(props) {
     //   props.setAppList(newAppList);
     // } else {
     // open a new window
+
+    // focuses new window
+    [].slice
+      .call(document.getElementsByClassName("main-window"))
+      .forEach((ele) => {
+        if (ele.classList.contains(`${props.icon_content.title}-window`)) {
+          ele.style.zIndex = "200";
+        } else {
+          ele.style.zIndex = "100";
+        }
+        console.log(`Setting zIndex for ${ele.classList}`);
+        console.log(ele.style.zIndex);
+      });
+
     let newAppList = props.appList.map((ele) =>
       ele.title === props.icon_content.title
         ? {

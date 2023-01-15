@@ -1,13 +1,25 @@
 .draggable-window {
   z-index: 25;
+  position: relative;
+  align-self: center;
+  justify-self: center;
 }
 
 .main-window {
   background: hsl(0, 0%, 40%);
   border: 2px solid hsl(0, 0%, 95%);
   cursor: url("../../images/cursor32.png"), auto;
-  /* height: 100%;
-  width: 50em; */
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.562);
+  position: relative;
+  /* overflow: scroll; */
+  /* height: 15em;
+  width: 70em; */
+}
+
+.window-content {
+  max-height: 40vh;
+  max-width: 60vw;
+  overflow: scroll;
 }
 
 .top-bar {
@@ -43,6 +55,30 @@
   height: 20px;
   width: 20px;
   transition: 150ms;
+}
+
+.red-square {
+  background-color: rgb(255, 121, 121);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  transition: 150ms;
+}
+
+.red-square:hover:before {
+  content: "X";
+  height: 20px;
+  width: 20px;
+  background-color: rgb(173, 43, 43);
+  color: rgb(100, 24, 24);
+}
+
+.red-square:active {
+  transform-origin: center;
+  transform: scale(0.95);
 }
 
 .red-circle:hover,

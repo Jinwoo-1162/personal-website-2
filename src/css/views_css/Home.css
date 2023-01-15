@@ -44,6 +44,7 @@
   height: calc(100% - 1em - 10px);
   width: 100%;
   z-index: 10;
+  display: flex;
 }
 
 #window-overlap {
@@ -92,6 +93,7 @@
   }
 
   .intro-text {
+    height: 3em;
     margin-left: auto;
     margin-right: auto;
     text-align: center;

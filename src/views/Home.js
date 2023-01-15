@@ -33,7 +33,11 @@ function Home() {
       <div className="intro-container">
         <span className="my-name">Jinwoo_Park_OS</span>
         <div className="spacer" />
-        <Typewriter
+        <span className="intro-text">
+          I'm a software developer currently working at Amazon on AWS S3 Tools.
+          Click around to learn more about me
+        </span>
+        {/* <Typewriter
           options={{
             delay: 50,
             wrapperClassName: "intro-text",
@@ -46,7 +50,7 @@ function Home() {
               )
               .start();
           }}
-        />
+        /> */}
       </div>
       <div id="main-screen">
         <ToolBar />
@@ -71,6 +75,7 @@ function Home() {
             </svg>
           </div> */}
           {windowManager}
+          {/* <AppBar /> */}
           {/* <div id="window-overlap">{windowManager}</div> */}
         </div>
         {/* <AppBar showBar={numActiveApps !== 0} /> */}

@@ -1,4 +1,20 @@
 .mail-window-content {
   display: flex;
   flex-direction: column;
+  padding: 0.5em 3em;
+}
+
+.recycling-window-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 3em;
+}
+
+.projects-window-content {
+  /* overflow: scroll; */
+}
+
+.test-window-content {
+  height: 30em;
+  width: 30em;
 }
