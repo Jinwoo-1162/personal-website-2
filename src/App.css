@@ -6,6 +6,10 @@ body {
   /* scrollbar-width: none; */
 }
 
+html {
+  /* overflow: hidden; */
+}
+
 body {
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;

@@ -1,3 +1,7 @@
+.draggable-window {
+  z-index: 25;
+}
+
 .main-window {
   background: hsl(0, 0%, 40%);
   border: 2px solid hsl(0, 0%, 95%);
@@ -44,23 +48,29 @@
 .red-circle:hover,
 .green-circle:hover,
 .yellow-circle:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
-/* .red-circle:hover:before {
-  content: "X";
-  color: rgb(173, 43, 43);
+.red-circle:hover {
+  /* content: "X"; */
+  background-color: rgb(173, 43, 43);
 }
 
-.yellow-circle:hover:before {
-  content: "_";
-  color: rgb(165, 165, 50);
-} */
+.yellow-circle:hover {
+  /* content: "_"; */
+  background-color: rgb(165, 165, 50);
+}
+
+.green-circle:hover {
+  /* content: "_"; */
+  background-color: rgb(71, 134, 71);
+}
 
 .red-circle:active,
 .green-circle:active,
 .yellow-circle:active {
-  transform: scale(0.9);
+  transform-origin: center;
+  transform: scale(0.95);
 }
 
 .red-circle {

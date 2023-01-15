@@ -1,3 +1,5 @@
+import "../css/component_css/window_content.css";
+
 const iconlist = [
   {
     img: "/recycle_icon.png",
@@ -5,7 +7,12 @@ const iconlist = [
     title: "Recycling",
     active: false,
     minimized: false,
-    content: "This is the window for Recycling",
+    content: (
+      <div>
+        This is a Test
+        <button>Push me</button>
+      </div>
+    ),
   },
   {
     img: "/mail_icon.png",
@@ -13,7 +20,17 @@ const iconlist = [
     title: "Mail",
     active: false,
     minimized: false,
-    content: "This is the window for Mail",
+    content: (
+      <div className="mail-window-content">
+        <h3>Message Me!</h3>
+        <input className="mail-subject" placeholder="Subject"></input>
+        <textarea
+          className="mail-content"
+          placeholder="Type your message here"
+        ></textarea>
+        <button>Send</button>
+      </div>
+    ),
   },
   {
     img: "/folder_icon.png",

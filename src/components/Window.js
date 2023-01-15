@@ -1,8 +1,27 @@
 import "../css/component_css/Window.css";
 // import Draggable from "react-draggable";
 import { Rnd } from "react-rnd";
+import { useEffect, useState } from "react";
 
 function Window(props) {
+  const [currDisplay, setCurrDisplay] = useState("initial");
+  const [currStyle, setCurrStyle] = useState({ display: "initial" });
+
+  useEffect(() => {
+    if (props.content.active) {
+      setCurrDisplay("initial");
+    } else {
+      setCurrDisplay("none");
+    }
+  }, [props.content.active]);
+
+  const handleFullscreen = () => {
+    document
+      .getElementsByClassName(props.content.title)
+      .assign({ height: "300%", width: "300%" });
+    setCurrStyle({ ...currStyle, height: "100%", width: "100%" });
+  };
+
   const handleClose = () => {
     // close the window
     let newAppList = props.appList.map((ele) =>
@@ -16,6 +35,7 @@ function Window(props) {
     );
     props.setAppList(newAppList);
     props.setActiveCount((activeCount) => activeCount - 1);
+    setCurrStyle({ ...currStyle, display: "none" });
     // console.log(props.appList);
   };
 
@@ -26,9 +46,12 @@ function Window(props) {
       bounds="parent"
       dragHandleClassName="top-bar"
       cancel=".circle"
-      style={
-        props.content.active ? { display: "initial" } : { display: "none" }
-      }
+      enableResizing={false}
+      style={{
+        ...currStyle,
+        display: currDisplay,
+        // (props.content.active ?  display: "initial"  :  display: "none" )}
+      }}
     >
       <div className="main-window">
         <div className="top-bar">
@@ -36,7 +59,7 @@ function Window(props) {
           <div className="invisible-circle"></div>
           <div className="invisible-circle"></div>
           <div className="window-title">{props.content.title}</div>
-          <div className="circle green-circle"></div>
+          <div className="circle green-circle" onClick={handleFullscreen}></div>
           <div className="circle yellow-circle"></div>
           <div className="circle red-circle" onClick={handleClose}></div>
         </div>
