@@ -6,7 +6,6 @@ import ToolBar from "../components/ToolBar";
 import iconlist from "../resources/iconlist";
 import { useEffect, useState } from "react";
 import Window from "../components/Window";
-import Typewriter from "typewriter-effect";
 
 function Home() {
   const [windowManager, setWindowManager] = useState();

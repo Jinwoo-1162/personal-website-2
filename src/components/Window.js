@@ -29,6 +29,7 @@ function Window(props) {
       });
   };
 
+  // eslint-disable-next-line
   const handleFullscreen = () => {
     // handle fullscreening the window
     document.getElementsByClassName(
@@ -55,6 +56,7 @@ function Window(props) {
     props.setAppList(newAppList);
   };
 
+  // eslint-disable-next-line
   const handleMinimize = () => {
     // handle minimizing the window
     document.getElementsByClassName(

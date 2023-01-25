@@ -2,6 +2,7 @@ import "../css/component_css/Icon.css";
 import { useState } from "react";
 
 function Icon(props) {
+  // eslint-disable-next-line
   const [active, setActive] = useState(false);
 
   const clickIcon = () => {
