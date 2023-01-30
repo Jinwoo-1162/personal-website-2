@@ -29,8 +29,8 @@ function Icon(props) {
         } else {
           ele.style.zIndex = "100";
         }
-        console.log(`Setting zIndex for ${ele.classList}`);
-        console.log(ele.style.zIndex);
+        // console.log(`Setting zIndex for ${ele.classList}`);
+        // console.log(ele.style.zIndex);
       });
 
     let newAppList = props.appList.map((ele) =>

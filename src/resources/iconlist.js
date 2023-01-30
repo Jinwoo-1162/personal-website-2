@@ -1,4 +1,5 @@
 import "../css/component_css/window_content.css";
+import EmailService from "../components/EmailService";
 
 const iconlist = [
   {
@@ -37,17 +38,7 @@ const iconlist = [
     active: false,
     minimized: false,
     fullscreen: false,
-    content: (
-      <div className="mail-window-content">
-        <span>Message Me!</span>
-        <input className="mail-subject" placeholder="Subject"></input>
-        <textarea
-          className="mail-content"
-          placeholder="Type your message here"
-        ></textarea>
-        <button>Send</button>
-      </div>
-    ),
+    content: <EmailService />,
   },
   {
     img: "/folder_icon.png",
