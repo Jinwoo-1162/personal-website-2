@@ -1,5 +1,7 @@
 import "../css/component_css/window_content.css";
 import EmailService from "../components/EmailService";
+import Projects from "../components/Projects";
+import Experiences from "../components/Experience";
 
 const iconlist = [
   {
@@ -49,24 +51,7 @@ const iconlist = [
     fullscreen: false,
     content: (
       <div className="projects-window-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit
-        amet justo ante. Aliquam erat volutpat. Pellentesque turpis tellus,
-        consequat eu tincidunt sit amet, posuere id ante. Proin consectetur in
-        libero ac congue. Nunc sagittis mi in bibendum pellentesque. Sed semper,
-        risus at pharetra laoreet, neque ex pretium justo, vel convallis neque
-        tortor at nisl. Quisque mattis sollicitudin sem vel rhoncus. Vivamus
-        cursus tortor at mattis maximus. Aenean dapibus, quam id faucibus
-        molestie, augue nulla dictum est, non porta turpis nisi eget sapien.
-        Donec luctus magna leo, ac pulvinar felis porttitor vitae. Phasellus
-        facilisis sapien non purus malesuada, sit amet porttitor velit fe
-        blandit ipsum. Sed non ligula id eros temporcursus. Pellentesque
-        convallis leo sit amet diam ornare condimentum vel at nibh. Praesent et
-        libero quis odio auctor interdum. In nec tristique dolor. Nullam at
-        placerat erat, ac porta arcu. Nam quis justo eu erat dapibus hendrerit.
-        Nunc eget porttitor eros, placerat tristique turpis. Praesent dolor
-        augue, porta ut ligula vel, scelerisque condimentum ipsum. Sed non
-        gravida augue. Ut viverra augue vitae scelerisque auctor. Vivamus eget
-        nulla viverra, bibendum justo vitae, tincidunt odio.
+        <Projects />
       </div>
     ),
   },
@@ -77,7 +62,7 @@ const iconlist = [
     active: false,
     minimized: false,
     fullscreen: false,
-    content: "This is the window for Experience",
+    content: <Experiences />,
   },
   {
     img: "/document_icon.png",

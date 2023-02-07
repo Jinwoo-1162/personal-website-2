@@ -10,6 +10,10 @@
   gap: 0.3rem;
 }
 
+#email-form > input {
+  /* border-color: red; */
+}
+
 .recycling-window-content {
   display: flex;
   flex-direction: column;
