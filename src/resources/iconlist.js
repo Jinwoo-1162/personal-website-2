@@ -2,6 +2,7 @@ import "../css/component_css/window_content.css";
 import EmailService from "../components/EmailService";
 import Projects from "../components/Projects";
 import Experiences from "../components/Experience";
+import Educations from "../components/Education";
 
 const iconlist = [
   {
@@ -95,16 +96,7 @@ const iconlist = [
     active: false,
     minimized: false,
     fullscreen: false,
-    content: "This is the window for Education",
-  },
-  {
-    img: "/document_icon.png",
-    alt: "Test",
-    title: "Test",
-    active: false,
-    minimized: false,
-    fullscreen: false,
-    content: <div className="test-window-content">Test </div>,
+    content: <Educations />,
   },
 ];
 
